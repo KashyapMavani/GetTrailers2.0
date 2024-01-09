@@ -33,6 +33,16 @@
             height: 50px;
         }
     }
+
+    .logo-text{
+        padding-left: 10px;
+        position: absolute;
+        top:18px;
+        font-size: 20pt;
+        font-weight: 700;
+        color:white;
+        
+    }
     .menuItems {
         list-style-type: none;
         display: none;
