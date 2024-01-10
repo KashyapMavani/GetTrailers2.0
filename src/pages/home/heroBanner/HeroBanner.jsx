@@ -14,13 +14,17 @@ const HeroBanner = () => {
     const navigate = useNavigate();
     const { url } = useSelector((state) => state.home);
     const { data, loading } = useFetch("/movie/upcoming");
+    const [counter, setCounter] = useState(0)
+    
+    setInterval(()=> setCounter(1),500)
 
     useEffect(() => {
+        
         const bg =
             url.backdrop +
             data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
         setBackground(bg);
-    }, [data]);
+    }, [counter]);
 
     const searchQueryHandler = (event) => {
         // if (event.key === "Enter" && query.length > 0) {
