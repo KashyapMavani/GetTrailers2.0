@@ -16,7 +16,7 @@ const HeroBanner = () => {
     const { data, loading } = useFetch("/movie/upcoming");
     const [counter, setCounter] = useState(0)
     
-    setInterval(()=> setCounter(1),500)
+    setInterval(()=> setCounter(1),1000)
 
     useEffect(() => {
         
